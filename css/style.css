@@ -1,187 +1,349 @@
-
 * {
-  margin: 0px;
-  padding: 0px;
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-size: large;
-  font-weight: bold;
-  /* text-transform: uppercase; */
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: large;
+    font-weight: bold;
+    text-transform: uppercase;
+    box-sizing: border-box;
 }
 
-nav {
-  background-color: #160b0b;
-  color: white;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 30% 60%;
-      grid-template-columns: 30% 60%;
-  -webkit-column-gap: 10%;
-          column-gap: 10%;
-  padding: 0% 5%;
+
+body{
+    height: 100vh;
+    width: 100vw;
 }
 
-nav .array-inputs {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 60% 40%;
-      grid-template-columns: 60% 40%;
-  place-content: center;
-  padding: 5% 0%;
+
+.nav-heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:rgb(0, 0, 0);
+    color: white;
+    height: 2%;
+    text-align: center;
+    padding: 0.2rem;
+    font-size: 1.6rem;
+    border: 0.2rem solid black;
+    padding: 3% 0%;
+    text-align: center;
+}
+.container {
+    width: 100%;
+    height: 98%;
+    display: flex;
+    flex-direction: row;
+    
+
 }
 
-nav .array-inputs #a_size {
-  padding: 5% 0%;
-}
+.left{
+    width: 30%;
+    height: 100%;
+    min-height: 0;
 
-nav .array-inputs #a_speed {
-  padding: 5% 0%;
-}
+    background-color: #3b3a3a;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    
+    
+    padding: 0% 0%;
 
-nav .array-inputs #a_generate {
-  background-color: transparent;
-  border: none;
-  outline: none;
-  color: white;
-  padding: 4% 0% 0% 0%;
-  padding-left: 20%;
-}
-
-nav .array-inputs #a_generate:hover {
-  cursor: pointer;
-}
-
-nav .header_right {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-nav .header_right .nav-heading {
-  display: inline-block;
-  font-size: xxx-large;
-  padding: 3% 0%;
-}
-
-nav .header_right .algos {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (16.66667%)[6];
-      grid-template-columns: repeat(6, 16.66667%);
-  place-content: center;
-  padding: 2% 0%;
-}
-
-nav .header_right .algos button {
-  background-color: transparent;
-  border: none;
-  color: white;
-  outline: none;
-  padding: 5% 0%;
-  font-size: x-large;
-  border-radius: 10px;
-}
-
-nav .header_right .algos button:hover {
-  background-color: rgb(81, 81, 82);
-  cursor: pointer;
-}
-
-nav .header_right .algos .butt_locked {
-  background-color: transparent;
-  cursor: pointer;
-}
-
-nav .header_right .algos .butt_locked:hover {
-  background-color: transparent;
-  cursor: pointer;
-}
-
-nav .header_right .algos .butt_selected {
-  background-color: white;
-  color: green;
-}
-
-nav .header_right .algos .butt_selected:hover {
-  background-color: white;
-  cursor: pointer;
-}
-
-nav .header_right .algos .butt_unselected:hover {
-  background-color: blue;
-  cursor: pointer;
-}
-
-section {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 20% 60% 20%;
-      grid-template-columns: 20% 60% 20%;
-}
-
-section .Complexity_Containers {
-  margin-top: 20%;
-}
-
-section .Complexity_Containers .Pair_Definitions {
-  margin-top: 20%;
-}
-
-section .Complexity_Containers .Pair_Definitions p {
-  display: inline;
-}
-
-section .Complexity_Containers .Pair_Definitions p.Sub_Heading {
-  font-size: medium;
-  text-transform: none;
-}
-
-section #Info_Cont1 {
-  padding: 20% 10%;
-}
-
-section #Info_Cont1 h3 {
-  text-decoration: underline;
-}
-
-section #array_container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
-  height: 70vh;
-}
-
-section #Info_Cont2 {
-  padding: 20% 10%;
-}
-
-section #Info_Cont2 h3 {
-  text-decoration: underline;
-}
-
-.hide {
-  display: none;
-}
-
-/*
-@media (max-width: 480px)//Mobiles
-{
+    .array-inputs {
+        background-color: rgba(63, 116, 163, 0.388);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        height: 50%;
+        
+        
+        padding: 5%;
+        margin: 3%;
+    
+        #a_size {
+            padding: 5% 0%;
+        }
+    
+        #a_speed {
+            padding: 5% 0%;
+        }
+        #a_generate {
+            background-color: transparent;
+            border: none;
+            outline: none;
+            color: white;
+            padding: 2% ;
+            margin: 0;
+            
+        }
+        #a_generate:hover {
+            cursor: pointer;
+            background-color: rgba(222, 222, 222, 0.553);
+            border-radius: 1rem;
+        }
+    }
+    
     
 }
 
-@media (min-width: 481px) and (max-width: 1250px)//Tablets
-{
+
+
+
+   
+    
+
+    .algos {
+        background-color: rgba(63, 116, 163, 0.388);
+        
+        height: 50%;
+        display: flex;
+        flex-direction: column;
+        gap: 0.3rem;    
+        justify-content: space-evenly;
+        margin: 3%;
+        padding: 2% 0%;
+    }
+    .algos button {
+        background-color: transparent;
+        border: none;
+        color: white;
+        outline: none;
+        padding: 2% 0%;
+        margin: 0.1rem;
+        font-size: medium;
+        border-radius: 1rem;
+    }
+    .algos button:hover {
+        background-color: rgba(222, 222, 222, 0.553);
+        cursor: pointer;
+    }
+    .algos .butt_locked {
+        background-color: transparent;
+        cursor: pointer;
+    }
+     .algos .butt_locked:hover {
+        background-color: transparent;
+        cursor: pointer;
+    }
+     .algos .butt_selected {
+        background-color: rgb(0, 0, 0);
+        color: white;
+    }
+     .algos .butt_selected:hover {
+        background-color: rgb(0, 0, 0);
+        cursor: pointer;
+    }
+     .algos .butt_unselected:hover {
+        background-color: rgba(222, 222, 222, 0.553);
+        cursor: pointer;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.right{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 70%;
+    height: 100%;
+    min-height: 0;
+    overflow: hidden;
+    
+    
+    #array_container {
+        
+        display: flex;
+         width: 100%;
+        height: auto;
+        flex: 1;
+        
+    }
+    
+    .info{
+        display: flex;
+        width: 100%;
+        min-height: 25%;
+        justify-self: center;
+        
+        background-color: #3b3a3a;
+        color: white;
+        
+        text-align: center;
+
+        .Pair_Definitions{
+            padding: 2% 0;
+        }
+        
+    }
+     
+    #Info_Cont1 {
+        
+        width: 50%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 1%;
+        
+
+        h3 {
+            background-color: rgba(192, 186, 186, 0.632);
+            border-radius: 0.2rem;
+            padding: 1%;
+            margin: 1%;
+            width: 100%;
+        }
+
+       
+        .Pair_Definitions{
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            border-radius: 0.2rem;
+            
+            p{
+                font-size: smaller;
+                background-color: rgba(192, 186, 186, 0.632);
+                width: 100%;
+                
+                padding: 1% 0;
+                margin: 1% 0;
+
+                
+            }
+
+        }
+    }
+
+    #Info_Cont2 {
+        height: 100%;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 3%;
+        
+        
+
+        h3 {
+            background-color: rgba(192, 186, 186, 0.632);
+            border-radius: 0.2rem;
+            padding: 1%;
+            
+            width: 100%;
+        }
+
+        .Pair_Definitions{
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            background-color: rgba(192, 186, 186, 0.632);
+                border-radius: 0.2rem;
+            p{
+                font-size: smaller;
+                
+                
+                
+            }
+
+        }
+    }
+    
+  
+   
+
+    
+
 
 }
 
-@media (min-width: 1251px)//Laptops and up
-{
+
+
+@media only screen and (max-width: 768px) {
+    .container {
+        display: flex;
+        flex-direction: row;
+        height: 100vh;
+        width: 100vw;
+   }
+
+   .nav-heading{
+    font-size: 1rem;
+
+   }
+  
+
+        .left {
+            display: flex;
+            flex-direction: column;
+            
+       }
+    
+       .array-inputs{
+        font-size: 0.5rem;
+       }
+       
+    
+            
+        .algos{
+            font-size: 5px;
+        }
+       
+   
+
+   .right{
+
+    display: flex;
+    flex-direction: column;
+
+    .info{
+        
+    }
+    
+    
+    #Info_Cont1{
+        
+
+        h3{
+            font-size: smaller;
+        }
+    }
+    #Info_Cont2{
+        h3{
+            font-size: smaller;
+        }
+    }
+    #array_container{
+        width: 100%;
+    }
+   
+   
+}
 
 }
-*/
 
-/*# sourceMappingURL=style.css.map */
+
+.hide {
+    display: none;
+}
